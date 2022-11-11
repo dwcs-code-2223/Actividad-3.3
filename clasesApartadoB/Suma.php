@@ -26,9 +26,7 @@ class Suma extends Calculo{
         
     }
     
-    public function __construct(protected $op1, protected $op2) {
-       
-    }
+    
 
 
 }

@@ -7,7 +7,7 @@
 https://www.php.net/manual/es/language.oop5.autoload.php
 
 spl_autoload_register(function ($nombre_clase) {
-    include "clasesApartadoB".DIRECTORY_SEPARATOR . $nombre_clase . '.php';
+    require_once "clasesApartadoB".DIRECTORY_SEPARATOR . $nombre_clase . '.php';
 });
 
 $op1 = 5;

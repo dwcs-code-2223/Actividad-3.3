@@ -12,9 +12,7 @@
  */
 
 
-class Suma extends Calculo{
-    
-    
+class Suma extends Calculo{ 
  
     public function calcular() {
          if (isset($this->operando1) && isset($this->operando2) && is_numeric($this->operando1) &&  is_numeric($this->operando2)) {

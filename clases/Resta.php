@@ -12,7 +12,6 @@
  */
 
 class Resta extends Calculo {
-
    
 
     public function calcular() {

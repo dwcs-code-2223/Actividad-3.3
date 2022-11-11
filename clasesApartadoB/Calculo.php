@@ -11,9 +11,10 @@
  * @author maria
  */
 abstract class Calculo {
-
-    protected $operando1;
-    protected $operando2;
+//Por usar el modificador de visibilidad en el constructor, no se necesitan los atributos:
+//https://www.php.net/manual/en/language.oop5.decon.php#language.oop5.decon.constructor.promotion
+//    protected $operando1;
+//    protected $operando2;
     protected $resultado;
 
     public function setOperando1($operando1): void {
@@ -29,4 +30,19 @@ abstract class Calculo {
     }
 
     public abstract function calcular();
+    
+    //Si no se usase Constructor promotion (https://www.php.net/manual/en/language.oop5.decon.php#language.oop5.decon.constructor.promotion)
+    //Se podría asignar directamente a los atributos protected
+    public function __construct( protected $operando1, 
+            protected $operando2) {
+//       $this->operando1=$op1;
+//       $this->operando2=$op2;
+    }
+    
+    //Constructor al uso
+//     public function __construct(  $op1, 
+//            protected $op2) {
+//       $this->operando1=$op1;
+//       $this->operando2=$op2;
+//    }
 }

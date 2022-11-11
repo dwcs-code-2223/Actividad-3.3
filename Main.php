@@ -7,10 +7,10 @@
 https://www.php.net/manual/es/language.oop5.autoload.php
 
 spl_autoload_register(function ($nombre_clase) {
-    include "clases".DIRECTORY_SEPARATOR . $nombre_clase . '.php';
+    require_once "clases".DIRECTORY_SEPARATOR . $nombre_clase . '.php';
 });
 
-$op1 = 5;
+$op1 = null;
 $op2 = 10;
 
 probarOperacion($op1, $op2, "Suma");

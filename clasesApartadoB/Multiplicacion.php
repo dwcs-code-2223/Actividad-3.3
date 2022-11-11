@@ -20,7 +20,7 @@ class Multiplicacion extends Calculo{
         }
     }
     
-     public function __construct(protected $operando1, protected $operando2) {
-        
-    }
+    
+    
+    
 }
